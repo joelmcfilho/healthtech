@@ -62,9 +62,5 @@ def download_execution():
     for url in get_links_by_years():
         download_file(url)
 
-
-
 if __name__ == "__main__":
     download_execution()
-    
-

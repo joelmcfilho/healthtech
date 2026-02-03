@@ -4,7 +4,7 @@ import zipfile
 # Este método garante que o diretório de saída (Para os arquivos descompactados) exista, 
 # itera em uma lista de diretórios geradas pelo método "listdir()" e prepara/executa a descompactação
 # de item por item dessa lista através da biblioteca Zipfile.
-def extract_all(download_dir="data/downloaded",extracted_dir="data/processed"):
+def decompresser(download_dir="data/downloaded",extracted_dir="data/processed"):
     os.makedirs("data/processed",exist_ok=True)
 
     for zip_file in os.listdir(download_dir):
@@ -23,7 +23,5 @@ def extract_all(download_dir="data/downloaded",extracted_dir="data/processed"):
             print("-----------------------------------------------------")
 
 #-----------------------------------------------------------------------------------
-        
-
 if __name__ == "__main__":
-    print(extract_all())
+    decompresser(download_dir="data/downloaded",extracted_dir="data/processed")
